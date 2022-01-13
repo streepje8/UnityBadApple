@@ -86,9 +86,9 @@ public class WindowManager : MonoBehaviour
         {
             for (int x = 0; x < width; x++)
             {
-                int px = Mathf.RoundToInt(x/((float)width) * 480f);
-                int py = -Mathf.RoundToInt(y/((float)height) * 360f);
-                windows[y][x].state = currentFrame.GetPixel(px, py).r > 0.5f;
+                int px = Mathf.RoundToInt(x/((float)width) * 512f);
+                int py = -Mathf.RoundToInt(y/((float)height) * 265f);
+                windows[y][x].state = currentFrame.GetPixel(px, py).r < 0.5f;
             }
         }
     }

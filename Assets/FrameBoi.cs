@@ -19,11 +19,15 @@ public class FrameBoi : EditorWindow
         // Update is called once per frame
     void Update()
     {
-        WindowManager.showFrame(frame);
-        if (frame < 6572)
-        {
-            frame++;
+        time += Time.deltaTime;
+        if(time > 3f) { 
+            WindowManager.showFrame(frame);
+            if (frame < 6572)
+            {
+                frame++;
+            }
+            time = 0;
+            Repaint();
         }
-        Repaint();
     }
 }
